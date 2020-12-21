@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    font-family: 'Mr Dafoe', cursive;
+    font-size: 50px;
+    display: inline;
+    color: white;
+    margin-left: 30px;
+    font-weight: normal;
+}
+
+#header {
+    position: fixed;
+    width: 100%;
+    background-color: #dd3838;
+    line-height: 120px;
+    align-content: center;
+    height: 120px;
+}
+
+#carrito {
+    display: inline-block;
+}
+
+#header #enlaces {
+    float: right;
+    font-weight: bold;
+}
+
+#enlaces a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+#carrito {
+    width: 100px;
+    height: 50px;
+    padding: 10px;
+    line-height: 50px;
+    background-color: #df6d6d;
+    margin: 20px;
+    border: 5px solid white;
+}
+
+#carrito a {
+    margin-right: 0;
+}
+
+.icon {
+    display: inline-block;
+    float: right;
+    margin-right: 5px;
+}
