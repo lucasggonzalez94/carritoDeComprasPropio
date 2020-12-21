@@ -4,6 +4,8 @@ body {
     padding: 0;
 }
 
+/* Header */
+
 .logo {
     font-family: 'Mr Dafoe', cursive;
     font-size: 50px;
@@ -11,48 +13,64 @@ body {
     color: white;
     margin-left: 30px;
     font-weight: normal;
+    flex-grow: 1;
 }
 
 #header {
+    display: flex;
+    align-items: center;
     position: fixed;
     width: 100%;
     background-color: #dd3838;
-    line-height: 120px;
     align-content: center;
-    height: 120px;
+    height: auto;
+    color: white;
 }
 
 #carrito {
     display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    line-height: 50px;
+    font-size: 30px;
+    background-color: #df6d6d;
+    margin: 20px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    cursor: pointer;
+}
+
+#icono {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #header #enlaces {
-    float: right;
+    display: flex;
     font-weight: bold;
+    align-items: center;
 }
 
 #enlaces a {
-    color: white;
+    color: inherit;
     text-decoration: none;
     margin-right: 20px;
 }
 
-#carrito {
-    width: 100px;
-    height: 50px;
-    padding: 10px;
-    line-height: 50px;
-    background-color: #df6d6d;
-    margin: 20px;
-    border: 5px solid white;
+#carrito:hover {
+    background-color: white;
+    color: #dd3838;
 }
 
-#carrito a {
-    margin-right: 0;
-}
+/* Portada */
 
-.icon {
-    display: inline-block;
-    float: right;
-    margin-right: 5px;
+#portada {
+    padding-top: 120px;
 }
