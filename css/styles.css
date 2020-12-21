@@ -46,6 +46,7 @@ body {
     -ms-border-radius: 100px;
     -o-border-radius: 100px;
     cursor: pointer;
+    z-index: 10;
 }
 
 #icono {
@@ -71,7 +72,7 @@ body {
 #carrito:hover {
     background-color: white;
     color: #dd3838;
-    box-shadow: 0px 0px 10px black;
+    /* box-shadow: 0px 0px 10px black; */
 }
 
 /* Ventana carrito */
@@ -89,6 +90,8 @@ body {
     -o-border-radius: 5px 35px 5px 5px;
     top: 20px;
     right: 20px;
+    z-index: 9;
+    box-shadow: 0px 0px 10px black;
 }
 
 /* Portada */
@@ -162,7 +165,7 @@ body {
 }
 
 .articulo {
-    max-width: 250px;
+    max-width: 300px;
     margin-top: 30px;
     margin-bottom: 30px;
     border-radius: 5px;
@@ -172,10 +175,11 @@ body {
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
     box-shadow: 0px 0px 10px #b1b1b1;
+    cursor: pointer;
 }
 
 #articulos img {
-    width: 250px;
+    width: 300px;
 }
 
 .articulo > div {
