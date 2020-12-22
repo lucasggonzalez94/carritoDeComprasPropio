@@ -17,7 +17,7 @@
 }
 
 .articulo {
-    background-color: #051b35;
+    background-color: #243338;
     max-width: 300px;
     border-radius: 5px;
     overflow: hidden;
@@ -31,6 +31,7 @@
 
 .precio {
     font-weight: bold;
+    text-align: center;
 }
 
 #articulos img {
@@ -48,6 +49,7 @@
 .articulo > div a {
     display: block;
     text-decoration: none;
+    color: black;
 }
 
 .articulo > div button {
@@ -69,5 +71,5 @@
 }
 
 .articulo > div button:hover {
-    box-shadow: 0px 0px 10px #b1b1b1;
+    box-shadow: 0px 0px 10px black;
 }
