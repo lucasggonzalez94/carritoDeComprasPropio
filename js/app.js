@@ -26,7 +26,7 @@ function leerArticulo(e) {
 
 function agregarArticulo(articulo) {
 
-    console.log(articulo.imagen)
+    // console.log(articulo.imagen)
 
     const tbody = document.createElement('tbody')
     tbody.innerHTML = `
