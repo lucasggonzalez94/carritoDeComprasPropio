@@ -4,24 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de compras</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.css">
+    <title>/beProgrammer.</title>
+    <link rel="stylesheet" href="./css/navegacion.css">
+    <link rel="stylesheet" href="./css/portada.css">
+    <link rel="stylesheet" href="./css/cursos.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./fonts/style.css">
 </head>
 
 <body>
     <header id="header">
-        <a href="./index.html" class="logo logo-header">TuCarrito</a>
-        <div class="enlaces">
-            <a href="./index.html">Inicio</a>
-            <a href="#">Nosotros</a>
-            <a href="#">Contacto</a>
+        <nav class="enlaces">
+            <a href="./index.html" class="logo">/beProgrammer.</a>
+            <div id="navegacion">
+                <a href="./index.html">Inicio</a>
+                <a href="#">Nosotros</a>
+                <a href="#">Contacto</a>
+                <a href="#">Categorías</a>
+            </div>
             <div id="carrito">
-                <div id="icono">
-                    <span class="icon-cart"></span>
-                </div>
+                <span class="icon-cart"></span>
             </div>
             <div id="ventana-carrito">
                 <h3>Carrito de compras</h3>
@@ -31,87 +34,78 @@
                         <tr>
                             <td class="imagen">Imágen</td>
                             <td class="titulo">Título</td>
-                            <td class="precio">Precio</td>
+                            <td class="precioTabla">Precio</td>
                         </tr>
                     </thead>
                 </table>
             </div>
-        </div>
-    </header>
-
-    <section id="portada">
-        <div class="container">
-            <h2 class="logo logo-portada">TuCarrito</h2>
+        </nav>
+        <section id="portada">
+            <p class="leyenda">Aprende a programar<br>con los mejores<br>cursos.</p>
             <div class="social">
                 <a href="https://www.facebook.com/lucasggonzalez94/" target="_blank"><span class="icon-facebook2"></span></a>
                 <a href="https://www.instagram.com/lucas.gabrielgonzalez/" target="_blank"><span class="icon-instagram"></span></a>
                 <a href="https://twitter.com/lucasgnzlz94" target="_blank"><span class="icon-twitter"></span></a>
             </div>
-        </div>
-    </section>
+        </section>
+    </header>
     <main id="contenido-principal">
         <section id="articulos">
             <article class="articulo">
-                <img src="./img/articulo.jpg" alt="articulo">
+                <img src="./img/javascript.png" alt="javascript">
                 <div>
-                    <h3>Titulo del articulo</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat at beatae, nostrum eaque
-                        perferendis nobis...</p>
+                    <h3>Curso de JavaScript</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat at beatae, nostrum eaque perferendis nobis...</p>
                     <a href="#">Ver más...</a>
                     <p class="precio">U$D 10</p>
                     <button>Añadir al carrito</button>
                 </div>
             </article>
             <article class="articulo">
-                <img src="./img/articulo.jpg" alt="articulo">
+                <img src="./img/react.png" alt="React js">
                 <div>
-                    <h3>Titulo del articulo</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat at beatae, nostrum eaque
-                        perferendis nobis...</p>
+                    <h3>Curso de React JS</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat at beatae, nostrum eaque perferendis nobis...</p>
                     <a href="#">Ver más...</a>
                     <p class="precio">U$D 10</p>
                     <button>Añadir al carrito</button>
                 </div>
             </article>
             <article class="articulo">
-                <img src="./img/articulo.jpg" alt="articulo">
+                <img src="./img/java.jpg" alt="Java">
                 <div>
-                    <h3>Titulo del articulo</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat at beatae, nostrum eaque
-                        perferendis nobis...</p>
+                    <h3>Curso de Java</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat at beatae, nostrum eaque perferendis nobis...</p>
                     <a href="#">Ver más...</a>
                     <p class="precio">U$D 10</p>
                     <button>Añadir al carrito</button>
                 </div>
             </article>
             <article class="articulo">
-                <img src="./img/articulo.jpg" alt="articulo">
+                <img src="./img/python.jpeg" alt="Python">
                 <div>
-                    <h3>Titulo del articulo</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat at beatae, nostrum eaque
-                        perferendis nobis...</p>
+                    <h3>Curso de Python</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat at beatae, nostrum eaque perferendis nobis...</p>
                     <a href="#">Ver más...</a>
                     <p class="precio">U$D 10</p>
                     <button>Añadir al carrito</button>
                 </div>
             </article>
             <article class="articulo">
-                <img src="./img/articulo.jpg" alt="articulo">
+                <img src="./img/php.png" alt="PHP">
                 <div>
-                    <h3>Titulo del articulo</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat at beatae, nostrum eaque
-                        perferendis nobis...</p>
+                    <h3>Curso de PHP</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat at beatae, nostrum eaque perferendis nobis...</p>
                     <a href="#">Ver más...</a>
                     <p class="precio">U$D 10</p>
                     <button>Añadir al carrito</button>
                 </div>
             </article>
             <article class="articulo">
-                <img src="./img/articulo.jpg" alt="articulo">
+                <img src="./img/nodejs.png" alt="Node JS">
                 <div>
-                    <h3>Titulo del articulo</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat at beatae, nostrum eaque
-                        perferendis nobis...</p>
+                    <h3>Curso de Node JS</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat at beatae, nostrum eaque perferendis nobis...</p>
                     <a href="#">Ver más...</a>
                     <p class="precio">U$D 10</p>
                     <button>Añadir al carrito</button>
@@ -121,10 +115,11 @@
     </main>
     <footer>
         <p>Lucas Gonzalez &copy; - 2020</p>
-        <div class="enlaces">
+        <div id="navegacion" class="enlaces">
             <a href="./index.html">Inicio</a>
             <a href="#">Nosotros</a>
             <a href="#">Contacto</a>
+            <a href="#">Categorías</a>
         </div>
     </footer>
     <script src="./js/app.js"></script>

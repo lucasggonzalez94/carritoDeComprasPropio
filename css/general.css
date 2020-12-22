@@ -1,0 +1,12 @@
+@font-face {
+    font-family: FuentePrincipal;
+    src: url("../fonts/MADE\ TOMMY\ Bold.otf") format("opentype");
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: #020d1a;
+}

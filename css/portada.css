@@ -1,0 +1,29 @@
+/* Portada */
+
+#portada {
+    display: flex;
+    width: 50%;
+    height: 100vh;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#portada .leyenda {
+    display: block;
+    margin: 0;
+    font-family: FuentePrincipal, Arial, Helvetica, sans-serif;
+    font-size: 80px;
+    text-align: right;
+    padding: 30px;
+}
+
+#portada .social {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    font-size: 30px;
+}
+
+.social a {
+    margin-right: 30px;
+}
