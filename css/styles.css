@@ -86,6 +86,8 @@ body {
     position: absolute;
     width: 0%;
     height: 0px;
+    /* width: 40%;
+    height: auto; */
     background-color: white;
     border-radius: 5px 35px 5px 5px;
     -webkit-border-radius: 5px 35px 5px 5px;
@@ -112,15 +114,28 @@ body {
 #ventana-carrito:hover {
     visibility: visible;
     opacity: 100%;
-    width: 30%;
-    height: 500px;
+    width: 40%;
+    height: auto;
 }
 
 #carrito:hover + #ventana-carrito {
     visibility: visible;
     opacity: 100%;
-    width: 30%;
-    height: 500px;
+    width: 40%;
+    height: auto;
+}
+
+#tabla-articulos {
+    width: 100%;
+    text-align: center;
+}
+
+#tabla-articulos .imagen {
+    width: 20%;
+}
+
+#tabla-articulos .precio {
+    width: 20%;
 }
 
 /* Portada */
@@ -210,6 +225,10 @@ body {
     -moz-transition: all 0.5s;
     -ms-transition: all 0.5s;
     -o-transition: all 0.5s;
+}
+
+.precio {
+    font-weight: bold;
 }
 
 .articulo:hover {
