@@ -45,6 +45,15 @@ header a {
     display: inline-block;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-weight: bold;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+#navegacion a:hover, a:focus {
+    background-size: 100% 2px;
 }
 
 #carrito {
@@ -136,4 +145,8 @@ header a {
 
 #tabla-articulos .precio {
     width: 20%;
+}
+
+#tabla-articulos thead {
+    font-weight: bold;
 }
