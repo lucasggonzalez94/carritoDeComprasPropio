@@ -40,7 +40,7 @@ header a {
     left: 20px;
 }
 
-.enlaces {
+.navegacion {
     position: absolute;
     display: flex;
     align-items: center;
@@ -49,14 +49,14 @@ header a {
     height: 120px;
 }
 
-#navegacion {
+#enlaces {
     display: flex;
     text-align: center;
     justify-content: center;
     position: absolute;
 }
 
-#navegacion a {
+#enlaces a {
     display: inline-block;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-weight: bold;
@@ -67,7 +67,7 @@ header a {
     transition: background-size .3s;
 }
 
-#navegacion a:hover, a:focus {
+#enlaces a:hover, a:focus {
     background-size: 100% 2px;
 }
 
@@ -91,10 +91,14 @@ header a {
     right: 20px;
 }
 
-.enlaces a {
+.navegacion a {
     color: inherit;
     text-decoration: none;
     margin-right: 60px;
+}
+
+.navegacion a:last-child {
+    margin-right: 0;
 }
 
 #carrito:hover {
