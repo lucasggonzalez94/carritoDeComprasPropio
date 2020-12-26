@@ -1,0 +1,35 @@
+@media (max-width: 1300px) {
+    header .navegacion {
+        display: none;
+    }
+
+    .logo {
+        left: 50%;
+        margin-left: -150px;
+    }
+
+    #menu-responsive {
+        display: block;
+    }
+
+    #enlaces-menu {
+        /* display: block; */
+        width: 20%;
+    }
+
+    #portada .leyenda {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 1000px) {
+    footer > p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 900px) {
+    .articulo {
+        min-height: 400px;
+    }
+}

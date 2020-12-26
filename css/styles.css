@@ -16,11 +16,12 @@ body {
 /* NAVEGACION */
 
 header {
-    height: 100vh;
-    width: 100vw;
-    background-image: url("../img/portada.jpg");
-    background-size: cover;
-    box-shadow: 0px 5px 15px black;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 120px;
 }
 
 header a {
@@ -35,21 +36,20 @@ header a {
     font-family: FuentePrincipal, Arial, Helvetica, sans-serif;
     font-size: 30px;
     padding: 30px;
-    width: 15%;
+    width: 300px;
     height: auto;
     left: 20px;
+    box-sizing: border-box;
 }
 
 .navegacion {
-    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 120px;
 }
 
 #enlaces {
+    width: 70%;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -168,19 +168,60 @@ header a {
     font-weight: bold;
 }
 
+/* Menu hamburguesa */
+
+#menu-responsive {
+    display: none;
+    position: absolute;
+    right: 40px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#enlaces-menu {
+    display: none;
+    height: 100vh;
+    width: 0%;
+    background-color: #3e454e;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+#enlaces-menu a {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+#enlaces-menu a:first-child {
+    margin-top: 30px;
+}
+
 /* PORTADA */
 
 #portada {
     display: flex;
-    width: 50%;
+    width: 100%;
     height: 100vh;
     align-items: center;
     justify-content: flex-end;
+    background: url("../img/portada.jpg") no-repeat fixed center;
+    background-size: cover;
+    box-shadow: 0px 5px 15px black;
 }
 
 #portada .leyenda {
+    width: 50%;
     display: block;
-    margin: 0;
+    margin-right: 50%;
     font-family: FuentePrincipal, Arial, Helvetica, sans-serif;
     font-size: 80px;
     text-align: right;
@@ -195,6 +236,8 @@ header a {
 }
 
 .social a {
+    color: white;
+    text-decoration: none;
     margin-right: 30px;
 }
 
