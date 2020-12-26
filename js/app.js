@@ -28,12 +28,12 @@ function agregarArticulo(articulo) {
 
     // console.log(articulo.imagen)
 
-    const tbody = document.createElement('tbody')
-    tbody.innerHTML = `
+    const tbody = document.querySelector('#body-tabla-cursos')
+    tbody.innerHTML += `
         <tr>
             <td class="imagen"><img src="${articulo.imagen}" alt="imagen" width="100px"/></td>
             <td class="titulo">${articulo.titulo}</td>
-            <td class="precio">${articulo.precio}</td>
+            <td class="precioTabla">${articulo.precio}</td>
         </tr>`
 
     tablaArticulos.appendChild(tbody)

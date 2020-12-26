@@ -133,6 +133,10 @@ header a {
     overflow: hidden;
 }
 
+#ventana-carrito hr {
+    width: 100%;
+}
+
 #ventana-carrito h3 {
     margin: 30px;
 }
@@ -160,7 +164,7 @@ header a {
     width: 20%;
 }
 
-#tabla-articulos .precio {
+#tabla-articulos .precioTabla {
     width: 20%;
 }
 
@@ -230,6 +234,7 @@ header a {
 
 #portada .social {
     position: absolute;
+    width: 50%;
     bottom: 30px;
     left: 30px;
     font-size: 30px;
@@ -239,6 +244,10 @@ header a {
     color: white;
     text-decoration: none;
     margin-right: 30px;
+}
+
+.social a:last-child {
+    margin-right: 0;
 }
 
 /* CURSOS */
@@ -342,8 +351,9 @@ footer {
     box-shadow: 0px -5px 15px black;
 }
 
-footer > p {
+.navegacion p {
     position: absolute;
     left: 20px;
+    width: 30%;
     margin: 0;
 }
