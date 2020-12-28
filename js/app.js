@@ -1,50 +1,102 @@
-const botonesAgregar = document.querySelectorAll('.articulo button')
-const tablaArticulos = document.querySelector('#tabla-articulos')
+const botonesAgregar = document.querySelectorAll('.articulo .btn')
+const ventanaCarrito = document.querySelector('#ventana-carrito')
+const tablaCursos = document.querySelector('#body-tabla-cursos')
 
-const carrito = []
+let carrito = []
 
-// Agrego el id del articulo y pongo a la escucha del evento click
-botonesAgregar.forEach(boton => {
-    boton.dataset.id = Date.now()
-    boton.addEventListener('click', leerArticulo)
-});
+// Agregar listeners
+cargarEventListeners()
+function cargarEventListeners() {
+    botonesAgregar.forEach(boton => {
+        boton.addEventListener('click', leerArticulo)
+    });
 
-// console.log(articulos)
+    ventanaCarrito.addEventListener('click', accionesCarrito)
+}
 
 // Al hacer click en el boton añadir se crea un objeto con la info del articulo y se agrega al carrito
 function leerArticulo(e) {
     e.preventDefault()
 
-    const articulo = e.target.parentElement.parentElement
+    const curso = e.target.parentElement.parentElement
 
-    const articuloObj = {
+    const cursoObj = {
         id: e.target.dataset.id,
-        titulo: articulo.querySelector('h3').textContent,
-        precio: articulo.querySelector('.precio').textContent,
-        imagen: articulo.querySelector('img').src
+        titulo: curso.querySelector('h3').textContent,
+        precio: curso.querySelector('.precio').textContent,
+        imagen: curso.querySelector('img').src,
+        cantidad: 1
     }
 
-    carrito.push(articuloObj)
+    // Se verifica que no exista ese curso agregado a la ventana, si existe, se aumenta la cantidad
+    const existe = carrito.some(curso => curso.id === cursoObj.id)
 
-    // console.log(articuloObj)
-    agregarArticuloHtml(articuloObj)
+    if (existe) {
+        const cursos = carrito.map( curso => {
+            if (curso.id === cursoObj.id) {
+                curso.cantidad++
+                return curso // Retorna el objeto actualizado
+            }else{
+                return curso // Retorna los objetos que no son duplicados
+            }
+        } )
+        carrito = [...cursos]
+    } else {
+        carrito.push(cursoObj)
+    }
+
+    agregarArticuloHtml(carrito)
 }
 
 // Agrega el html a la ventana del carrito de compras
-function agregarArticuloHtml(articulo) {
+function agregarArticuloHtml(cursos) {
 
-    // console.log(articulo.imagen)
+    limpiarHTML(tablaCursos)
 
-    const tbody = document.querySelector('#body-tabla-cursos')
-    tbody.innerHTML += `
-        <tr>
-            <td class="imagen"><img src="${articulo.imagen}" alt="imagen" width="100px"/></td>
-            <td class="titulo">${articulo.titulo}</td>
-            <td class="precioTabla">${articulo.precio}</td>
-            <td class="acciones">
-                <button class="btn btn-eliminar" data-id="${articulo.id}">Quitar</button>
-            </td>
-        </tr>`
+    cursos.forEach(curso => {
+        tablaCursos.innerHTML += `
+            <tr>
+                <td class="imagen"><img src="${curso.imagen}" alt="imagen" width="100px"/></td>
+                <td class="titulo-curso">${curso.titulo}</td>
+                <td class="precio-curso">${curso.precio}</td>
+                <td class="cantidad-curso">${curso.cantidad}</td>
+                <td class="acciones">
+                    <a href="#" description="Eliminar" class="btn btn-eliminar eliminar-curso" data-id="${curso.id}">X</a>
+                </td>
+            </tr>`
 
-    tablaArticulos.appendChild(tbody)
+        ventanaCarrito.querySelector('#tabla-articulos').appendChild(tablaCursos)
+    });
 }
+
+// Limpia elementos existentes
+function limpiarHTML(elemento) {
+    while (elemento.firstChild) {
+        elemento.removeChild(elemento.firstChild)
+    }
+}
+
+// Ejecuta las acciones de eliminar cursos o vaciar el carrito
+function accionesCarrito(e) {
+
+    if (e.target.classList.contains('btn-eliminar')) {
+        const id = e.target.dataset.id
+
+        carrito = carrito.filter(curso => curso.id !== id)
+
+        agregarArticuloHtml(carrito)
+    } else if (e.target.classList.contains('btn-vaciar')) {
+        vaciarCarrito()
+    }
+}
+
+// Limpia el html de la ventana del carrito y reinicia el array del carrito
+function vaciarCarrito() {
+
+    limpiarHTML(tablaCursos)
+
+    carrito = []
+}
+
+// LISTA DE TAREAS
+// Guardar articulos en indexedDB

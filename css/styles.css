@@ -13,6 +13,21 @@ body {
     background-color: #151e21;
 }
 
+.btn {
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    border: none;
+    height: 40px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    font-weight: bold;
+    color: white;
+}
+
 /* NAVEGACION */
 
 header {
@@ -110,6 +125,10 @@ header a {
 /* Ventana carrito */
 
 #ventana-carrito {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     visibility: hidden;
     opacity: 0;
     position: absolute;
@@ -132,6 +151,7 @@ header a {
     -o-transition: all 0.5s;
     color: white;
     overflow: hidden;
+    text-align: center;
 }
 
 #ventana-carrito hr {
@@ -149,6 +169,24 @@ header a {
     height: auto;
 }
 
+.btn-eliminar {
+    background-color: #a52a2a;
+    width: 40px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.btn-vaciar {
+    border: 1px solid white;
+    width: 50%;
+    font-weight: lighter;
+}
+
+.btn-vaciar:hover {
+    color: #3e454e;
+    background-color: white;
+}
+
 #carrito:hover + #ventana-carrito {
     visibility: visible;
     opacity: 100%;
@@ -157,6 +195,8 @@ header a {
 }
 
 #tabla-articulos {
+    display: block;
+    min-height: 150px;
     width: 100%;
     text-align: center;
 }
@@ -165,8 +205,16 @@ header a {
     width: 20%;
 }
 
-#tabla-articulos .precioTabla {
+#tabla-articulos .titulo-curso {
+    width: 50%;
+}
+
+#tabla-articulos .precio-curso {
     width: 20%;
+}
+
+#tabla-articulos .cantidad-curso {
+    width: 10%;
 }
 
 #tabla-articulos thead {
@@ -317,36 +365,19 @@ header a {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.btn {
-    display: block;
-    border: none;
-    height: 40px;
-    border-radius: 100px;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    -ms-border-radius: 100px;
-    -o-border-radius: 100px;
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
+    height: 100%;
 }
 
 .btn-agregar {
-    width: 180px;
+    width: 90%;
     position: absolute;
     left: 50%;
-    margin-left: -90px;
+    margin-left: -45%;
     bottom: 20px;
     background-color: #368c97;
 }
 
-.btn-eliminar {
-    background-color: #a52a2a;
-}
-
-.articulo > div button:hover {
+.articulo > div .btn:hover {
     box-shadow: 0px 0px 10px black;
 }
 
