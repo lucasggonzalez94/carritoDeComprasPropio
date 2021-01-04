@@ -4,6 +4,9 @@ const tablaCursos = document.querySelector('#body-tabla-cursos')
 const menuResponsive = document.querySelector('.icon-menu')
 const enlacesMenu = document.querySelector('#enlaces-menu')
 const header = document.querySelector('#header')
+const botonesVerMas = document.querySelectorAll('.btn-ver-mas')
+const modal = document.querySelector('#modal')
+const infoModal = document.querySelector('#infoModal')
 
 const topHeader = header.offsetTop
 let carrito = []
@@ -18,8 +21,12 @@ function cargarEventListeners() {
         boton.addEventListener('click', leerCurso)
     });
 
+    botonesVerMas.forEach(boton => {
+        boton.addEventListener('click', mostrarModal)
+    });
+
     ventanaCarrito.addEventListener('click', accionesCarrito)
-    document.addEventListener('click', esconderMenuResponsive)
+    document.addEventListener('click', esconderElementos)
     window.addEventListener('scroll', navBlack)
 }
 
@@ -148,7 +155,7 @@ function toggleMenu() {
 }
 
 // Al hacer click fuera del menu se esconde
-function esconderMenuResponsive(e) {
+function esconderElementos(e) {
     if (e.target === menuResponsive) {
         toggleMenu()
     } else if (e.target !== enlacesMenu) {
@@ -165,5 +172,53 @@ function navBlack() {
     }
 }
 
+// Se muestra una ventana modal con la info del curso seleccionado
+function mostrarModal(e) {
+    e.preventDefault()
+    gsap.set(modal, {display: 'flex'})
+    gsap.to(modal, .5, {opacity: 1})
+
+    const curso = e.target.parentElement.parentElement.parentElement
+
+    const cursoObj = {
+        id: e.target.dataset.id,
+        titulo: curso.querySelector('h3').textContent,
+        precio: curso.querySelector('.precio').textContent,
+        imagen: curso.querySelector('.img').src,
+        descripcion: curso.querySelector('#descripcion').textContent
+    }
+
+    const infoModal = document.createElement('div')
+    infoModal.classList.add('infoModal')
+
+    infoModal.innerHTML = `
+        <div id="cabeceraModal">
+            <img src="${cursoObj.imagen}" id="imgModal">
+            <h3 id="tituloModal">${cursoObj.titulo}</h3>
+        </div>
+        <hr>
+        <p id="descripcionModal">${cursoObj.descripcion}</p>
+        <div id="precioModal">
+            <p>${cursoObj.precio}</p>
+        </div>`
+
+    const btnCerrarModal = document.createElement('a')
+    btnCerrarModal.href = '#'
+    btnCerrarModal.classList.add('cerrarModal')
+    btnCerrarModal.textContent = 'X'
+    btnCerrarModal.addEventListener('click', cerrarModal)
+
+    limpiarHTML(modal)
+    infoModal.appendChild(btnCerrarModal)
+    modal.appendChild(infoModal)
+}
+
+function cerrarModal(e) {
+    e.preventDefault()
+    
+    gsap.set(modal, {display: 'none'})
+}
+
 // LISTA DE TAREAS
-// Guardar cursos en localstorage
+// Ventana modal con info del curso
+// Animar menu responsive

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/responsive.css">
     <link rel="stylesheet" href="./fonts/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 </head>
 
 <body>
@@ -60,6 +61,9 @@
         </div>
     </section>
     <main id="contenido-principal">
+        <div id="modal">
+            
+        </div>
         <section id="cursos">
             <article class="curso">
                 <img src="./img/javascript.png" alt="javascript" class="img">
@@ -68,7 +72,7 @@
                     <p id="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis eius aliquid aperiam voluptas, ullam, accusantium enim consequuntur laboriosam quas nemo omnis quae reprehenderit! Consequatur porro quasi cupiditate vitae tempore commodi ipsum explicabo, sequi non odit enim recusandae velit rem delectus aperiam iste maiores magni debitis possimus id, earum veniam amet sit quia. Aliquam voluptate quaerat delectus nesciunt dolorem voluptatibus nemo, molestiae illum aspernatur. Velit fuga quo iste fugiat alias vero repellendus earum corporis accusamus iusto dolorum, aliquam minus rem, officia optio quaerat. Consequatur nostrum ducimus, obcaecati asperiores fuga veritatis nemo amet harum mollitia eum molestias recusandae ad! Deleniti, nesciunt error.</p>
                     <p class="precio">U$D 10</p>
                     <div id="botones">
-                        <a href="#" class="btn btn-curso">Ver más...</a>
+                        <a href="#" class="btn btn-curso btn-ver-mas" data-id="1">Ver más...</a>
                         <a href="#" class="btn btn-curso btn-agregar" data-id="1">Añadir al carrito</a>
                     </div>
                 </div>
@@ -80,7 +84,7 @@
                     <p id="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis eius aliquid aperiam voluptas, ullam, accusantium enim consequuntur laboriosam quas nemo omnis quae reprehenderit! Consequatur porro quasi cupiditate vitae tempore commodi ipsum explicabo, sequi non odit enim recusandae velit rem delectus aperiam iste maiores magni debitis possimus id, earum veniam amet sit quia. Aliquam voluptate quaerat delectus nesciunt dolorem voluptatibus nemo, molestiae illum aspernatur. Velit fuga quo iste fugiat alias vero repellendus earum corporis accusamus iusto dolorum, aliquam minus rem, officia optio quaerat. Consequatur nostrum ducimus, obcaecati asperiores fuga veritatis nemo amet harum mollitia eum molestias recusandae ad! Deleniti, nesciunt error.</p>
                     <p class="precio">U$D 10</p>
                     <div id="botones">
-                        <a href="#" class="btn btn-curso">Ver más...</a>
+                        <a href="#" class="btn btn-curso btn-ver-mas" data-id="2">Ver más...</a>
                         <a href="#" class="btn btn-curso btn-agregar" data-id="2">Añadir al carrito</a>
                     </div>
                 </div>
@@ -92,7 +96,7 @@
                     <p id="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis eius aliquid aperiam voluptas, ullam, accusantium enim consequuntur laboriosam quas nemo omnis quae reprehenderit! Consequatur porro quasi cupiditate vitae tempore commodi ipsum explicabo, sequi non odit enim recusandae velit rem delectus aperiam iste maiores magni debitis possimus id, earum veniam amet sit quia. Aliquam voluptate quaerat delectus nesciunt dolorem voluptatibus nemo, molestiae illum aspernatur. Velit fuga quo iste fugiat alias vero repellendus earum corporis accusamus iusto dolorum, aliquam minus rem, officia optio quaerat. Consequatur nostrum ducimus, obcaecati asperiores fuga veritatis nemo amet harum mollitia eum molestias recusandae ad! Deleniti, nesciunt error.</p>
                     <p class="precio">U$D 10</p>
                     <div id="botones">
-                        <a href="#" class="btn btn-curso">Ver más...</a>
+                        <a href="#" class="btn btn-curso btn-ver-mas" data-id="3">Ver más...</a>
                         <a href="#" class="btn btn-curso btn-agregar" data-id="3">Añadir al carrito</a>
                     </div>
                 </div>
@@ -104,7 +108,7 @@
                     <p id="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis eius aliquid aperiam voluptas, ullam, accusantium enim consequuntur laboriosam quas nemo omnis quae reprehenderit! Consequatur porro quasi cupiditate vitae tempore commodi ipsum explicabo, sequi non odit enim recusandae velit rem delectus aperiam iste maiores magni debitis possimus id, earum veniam amet sit quia. Aliquam voluptate quaerat delectus nesciunt dolorem voluptatibus nemo, molestiae illum aspernatur. Velit fuga quo iste fugiat alias vero repellendus earum corporis accusamus iusto dolorum, aliquam minus rem, officia optio quaerat. Consequatur nostrum ducimus, obcaecati asperiores fuga veritatis nemo amet harum mollitia eum molestias recusandae ad! Deleniti, nesciunt error.</p>
                     <p class="precio">U$D 10</p>
                     <div id="botones">
-                        <a href="#" class="btn btn-curso">Ver más...</a>
+                        <a href="#" class="btn btn-curso btn-ver-mas" data-id="4">Ver más...</a>
                         <a href="#" class="btn btn-curso btn-agregar" data-id="4">Añadir al carrito</a>
                     </div>
                 </div>
@@ -116,7 +120,7 @@
                     <p id="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis eius aliquid aperiam voluptas, ullam, accusantium enim consequuntur laboriosam quas nemo omnis quae reprehenderit! Consequatur porro quasi cupiditate vitae tempore commodi ipsum explicabo, sequi non odit enim recusandae velit rem delectus aperiam iste maiores magni debitis possimus id, earum veniam amet sit quia. Aliquam voluptate quaerat delectus nesciunt dolorem voluptatibus nemo, molestiae illum aspernatur. Velit fuga quo iste fugiat alias vero repellendus earum corporis accusamus iusto dolorum, aliquam minus rem, officia optio quaerat. Consequatur nostrum ducimus, obcaecati asperiores fuga veritatis nemo amet harum mollitia eum molestias recusandae ad! Deleniti, nesciunt error.</p>
                     <p class="precio">U$D 10</p>
                     <div id="botones">
-                        <a href="#" class="btn btn-curso">Ver más...</a>
+                        <a href="#" class="btn btn-curso btn-ver-mas" data-id="5">Ver más...</a>
                         <a href="#" class="btn btn-curso btn-agregar" data-id="5">Añadir al carrito</a>
                     </div>
                 </div>
@@ -128,7 +132,7 @@
                     <p id="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis eius aliquid aperiam voluptas, ullam, accusantium enim consequuntur laboriosam quas nemo omnis quae reprehenderit! Consequatur porro quasi cupiditate vitae tempore commodi ipsum explicabo, sequi non odit enim recusandae velit rem delectus aperiam iste maiores magni debitis possimus id, earum veniam amet sit quia. Aliquam voluptate quaerat delectus nesciunt dolorem voluptatibus nemo, molestiae illum aspernatur. Velit fuga quo iste fugiat alias vero repellendus earum corporis accusamus iusto dolorum, aliquam minus rem, officia optio quaerat. Consequatur nostrum ducimus, obcaecati asperiores fuga veritatis nemo amet harum mollitia eum molestias recusandae ad! Deleniti, nesciunt error.</p>
                     <p class="precio">U$D 10</p>
                     <div id="botones">
-                        <a href="#" class="btn btn-curso">Ver más...</a>
+                        <a href="#" class="btn btn-curso btn-ver-mas" data-id="6">Ver más...</a>
                         <a href="#" class="btn btn-curso btn-agregar" data-id="6">Añadir al carrito</a>
                     </div>
                 </div>

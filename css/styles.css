@@ -1,7 +1,7 @@
 /* GENERALES */
 
 @font-face {
-    font-family: FuentePrincipal;
+    font-family: tommy-bold;
     src: url("../fonts/MADE\ TOMMY\ Bold.otf") format("opentype");
 }
 
@@ -52,7 +52,7 @@ header a {
     position: absolute;
     display: inline-block;
     color: white;
-    font-family: FuentePrincipal, Arial, Helvetica, sans-serif;
+    font-family: tommy-bold, Arial, Helvetica, sans-serif;
     font-size: 30px;
     padding: 30px;
     width: 300px;
@@ -286,7 +286,7 @@ header a {
     height: 100vh;
     display: flex;
     margin-right: 50%;
-    font-family: FuentePrincipal, Arial, Helvetica, sans-serif;
+    font-family: tommy-bold, Arial, Helvetica, sans-serif;
     font-size: 80px;
     text-align: right;
     padding: 30px;
@@ -411,6 +411,99 @@ header a {
     margin-left: -50%;
     font-weight: bold;
     text-align: center;
+}
+
+/* VENTANA MODAL INFO CURSO */
+
+#modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#modal .infoModal {
+    position: relative;
+    width: 80%;
+    height: auto;
+    background-color: #3e454e;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    overflow: hidden;
+}
+
+#modal .infoModal hr {
+    margin-top: 0;
+}
+
+#cabeceraModal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#imgModal {
+    width: 50%;
+}
+
+#tituloModal {
+    width: 50%;
+    font-size: 60px;
+    text-align: center;
+}
+
+#descripcionModal {
+    padding: 0 15px;
+}
+
+#precioModal {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+#precioModal p {
+    font-weight: bold;
+    background-color: #59626e;
+    display: inline-block;
+    width: 10%;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+#modal .cerrarModal {
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    line-height: 35px;
+    width: 35px;
+    height: 35px;
+    background-color: #59626e;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
 }
 
 /* FOOTER */
