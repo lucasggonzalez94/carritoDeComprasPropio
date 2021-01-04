@@ -14,7 +14,7 @@ body {
 }
 
 .btn {
-    display: block;
+    display: inline-block;
     text-align: center;
     line-height: 40px;
     border: none;
@@ -25,19 +25,22 @@ body {
     -ms-border-radius: 100px;
     -o-border-radius: 100px;
     font-weight: bold;
-    color: white;
 }
 
 /* NAVEGACION */
 
 header {
-    position: absolute;
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 120px;
     z-index: 10;
+}
+
+.fixed {
+    background-color: black;
 }
 
 header a {
@@ -194,30 +197,30 @@ header a {
     height: auto;
 }
 
-#tabla-articulos {
+#tabla-cursos {
     display: block;
     min-height: 150px;
     width: 100%;
     text-align: center;
 }
 
-#tabla-articulos .imagen {
+#tabla-cursos .imagen {
     width: 20%;
 }
 
-#tabla-articulos .titulo-curso {
+#tabla-cursos .titulo-curso {
     width: 50%;
 }
 
-#tabla-articulos .precio-curso {
+#tabla-cursos .precio-curso {
     width: 20%;
 }
 
-#tabla-articulos .cantidad-curso {
+#tabla-cursos .cantidad-curso {
     width: 10%;
 }
 
-#tabla-articulos thead {
+#tabla-cursos thead {
     font-weight: bold;
 }
 
@@ -229,21 +232,27 @@ header a {
     right: 40px;
     font-size: 30px;
     cursor: pointer;
+    z-index: 10;
 }
 
 #enlaces-menu {
-    display: none;
     height: 100vh;
-    width: 0%;
+    width: 20%;
+    padding-top: 90px;
     background-color: #3e454e;
-    position: absolute;
+    position: fixed;
     right: 0px;
     top: 0px;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    z-index: 0;
+}
+
+.esconder {
+    display: none;
 }
 
 #enlaces-menu a {
@@ -311,7 +320,7 @@ header a {
     width: 100%;
 }
 
-#articulos {
+#cursos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
@@ -323,12 +332,13 @@ header a {
     padding: 20px;
 }
 
-.articulo {
+.curso {
     padding: 0;
     position: relative;
     background-color: #243338;
     max-width: 300px;
     min-height: 450px;
+    max-height: 450px;
     border-radius: 5px;
     overflow: hidden;
     -webkit-border-radius: 5px;
@@ -338,25 +348,29 @@ header a {
     box-shadow: 0px 0px 10px black;
 }
 
-.precio {
-    font-weight: bold;
-    text-align: center;
-}
-
-#articulos img {
+#cursos img {
     width: 100%;
 }
 
-.articulo > div {
+.curso > div {
     padding: 10px;
 }
 
-.articulo > div h3 {
+.curso > div #descripcion {
+    height: 50px;
+    padding: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-bottom: 175px;
+}
+
+.curso > div h3 {
     margin-top: 0;
 }
 
-.articulo > div a {
-    display: block;
+.curso > div a {
+    display: inline-block;
     text-decoration: none;
     color: black;
 }
@@ -368,25 +382,35 @@ header a {
     height: 100%;
 }
 
-.btn-agregar {
-    width: 90%;
+#botones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     position: absolute;
+    width: 100%;
     left: 50%;
-    margin-left: -45%;
-    bottom: 20px;
-    background-color: #368c97;
+    margin-left: -50%;
+    bottom: 0;
 }
 
-.articulo > div .btn:hover {
+.btn-curso {
+    width: 90%;
+    background-color: #368c97;
+    margin-bottom: 20px;
+}
+
+.curso > div .btn:hover {
     box-shadow: 0px 0px 10px black;
 }
 
 .precio {
     position: absolute;
-    bottom: 60px;
+    bottom: 125px;
     width: 100%;
     left: 50%;
     margin-left: -50%;
+    font-weight: bold;
+    text-align: center;
 }
 
 /* FOOTER */
