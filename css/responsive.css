@@ -22,15 +22,53 @@
     }
 }
 
+@media (max-width: 1200px) {
+    #cursos {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #tituloModal {
+        font-size: 40px;
+    }
+
+    #enlaces-menu {
+        width: 30%;
+    }
+}
+
 @media (max-width: 1000px) {
     footer > p {
         font-size: 12px;
     }
+
+    #cursos {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-@media (max-width: 900px) {
-    #articulos {
+@media (max-width: 950px) {
+    #cursos {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    #tituloModal {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 850px) {
+    #modal .infoModal {
+        max-height: 95%;
+    }
+
+    #descripcionModal {
+        max-height: 150px;
+        overflow: scroll;
+    }
+
+    #precioModal p {
+        width: 20%;
     }
 }
 
@@ -47,6 +85,8 @@
     }
 
     #portada .leyenda {
+        display: flex;
+        justify-content: center;
         width: 100%;
         text-align: center;
         margin: 0;
@@ -55,13 +95,21 @@
     }
 }
 
-@media (max-width: 800px) and (max-height: 500px) {
-    
-}
-
 @media (max-width: 750px) {
     #portada .leyenda {
         font-size: 50px;
+    }
+
+    #tituloModal {
+        font-size: 15px;
+    }
+
+    #cursos {
+        grid-template-columns: 1fr;
+    }
+
+    #enlaces-menu {
+        width: 45%;
     }
 }
 
@@ -72,7 +120,7 @@
         text-align: center;
     }
 
-    #articulos {
+    #cursos {
         grid-template-columns: 1fr;
     }
 }

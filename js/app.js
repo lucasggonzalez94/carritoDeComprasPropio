@@ -220,5 +220,5 @@ function cerrarModal(e) {
 }
 
 // LISTA DE TAREAS
-// Ventana modal con info del curso
 // Animar menu responsive
+// Retocar responsive
