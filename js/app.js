@@ -24,15 +24,13 @@ function cargarEventListeners() {
 }
 
 function leerLocalStorage() {
-    let ls = []
-
     for(let i = 0; i < localStorage.length; i++){
         let clave = localStorage.key(i)
         let valor = localStorage.getItem(clave)
-        ls.push(JSON.parse(valor))
+        carrito.push(JSON.parse(valor))
     }
 
-    agregarCursoHtml(ls)
+    agregarCursoHtml(carrito)
 }
 
 // Al hacer click en el boton añadir se crea un objeto con la info del articulo y se agrega al carrito
@@ -56,6 +54,8 @@ function leerCurso(e) {
         const cursos = carrito.map(curso => {
             if (curso.id === cursoObj.id) {
                 curso.cantidad++
+                localStorage.removeItem(curso.id)
+                localStorage.setItem(curso.id, JSON.stringify(curso))
                 return curso // Retorna el objeto actualizado
             } else {
                 return curso // Retorna los objetos que no son duplicados
@@ -64,10 +64,10 @@ function leerCurso(e) {
         carrito = [...cursos]
     } else {
         carrito.push(cursoObj)
+        localStorage.setItem(cursoObj.id, JSON.stringify(cursoObj))
     }
 
     agregarCursoHtml(carrito)
-    localStorage.setItem(cursoObj.id, JSON.stringify(cursoObj))
 }
 
 // Agrega el html a la ventana del carrito de compras
