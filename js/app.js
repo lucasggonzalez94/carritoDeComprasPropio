@@ -8,12 +8,14 @@ const header = document.querySelector('#header')
 const topHeader = header.offsetTop
 let carrito = []
 
+window.addEventListener('load', leerLocalStorage)
+
 // Agregar listeners
 cargarEventListeners()
 
 function cargarEventListeners() {
     botonesAgregar.forEach(boton => {
-        boton.addEventListener('click', leerArticulo)
+        boton.addEventListener('click', leerCurso)
     });
 
     ventanaCarrito.addEventListener('click', accionesCarrito)
@@ -21,8 +23,20 @@ function cargarEventListeners() {
     window.addEventListener('scroll', navBlack)
 }
 
+function leerLocalStorage() {
+    let ls = []
+
+    for(let i = 0; i < localStorage.length; i++){
+        let clave = localStorage.key(i)
+        let valor = localStorage.getItem(clave)
+        ls.push(JSON.parse(valor))
+    }
+
+    agregarCursoHtml(ls)
+}
+
 // Al hacer click en el boton añadir se crea un objeto con la info del articulo y se agrega al carrito
-function leerArticulo(e) {
+function leerCurso(e) {
     e.preventDefault()
 
     const curso = e.target.parentElement.parentElement.parentElement
@@ -52,11 +66,12 @@ function leerArticulo(e) {
         carrito.push(cursoObj)
     }
 
-    agregarArticuloHtml(carrito)
+    agregarCursoHtml(carrito)
+    localStorage.setItem(cursoObj.id, JSON.stringify(cursoObj))
 }
 
 // Agrega el html a la ventana del carrito de compras
-function agregarArticuloHtml(cursos) {
+function agregarCursoHtml(cursos) {
 
     limpiarHTML(tablaCursos)
 
@@ -102,7 +117,9 @@ function accionesCarrito(e) {
 
         carrito = carrito.filter(curso => curso.id !== id)
 
-        agregarArticuloHtml(carrito)
+        agregarCursoHtml(carrito)
+
+        localStorage.removeItem(id)
     } else if (e.target.classList.contains('btn-vaciar')) {
         vaciarCarrito()
     }
@@ -114,6 +131,7 @@ function vaciarCarrito() {
     limpiarHTML(tablaCursos)
 
     carrito = []
+    localStorage.clear()
 }
 
 // MENU RESPONSIVE
@@ -148,4 +166,4 @@ function navBlack() {
 }
 
 // LISTA DE TAREAS
-// Guardar articulos en indexedDB
+// Guardar cursos en localstorage
