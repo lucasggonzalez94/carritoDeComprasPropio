@@ -113,6 +113,29 @@
     }
 }
 
+@media (max-width: 500px) {
+    .enlaces {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .enlaces a {
+        margin: 40px 0;
+        width: 50%;
+    }
+
+    footer {
+        height: 250px;
+    }
+
+    .navegacion p {
+        width: 100%;
+        margin-left: -50%;
+    }
+}
+
 @media (max-width: 480px) {
     #portada .social {
         left: 50%;
