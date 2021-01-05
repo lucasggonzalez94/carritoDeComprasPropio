@@ -1,7 +1,7 @@
 const botonesAgregar = document.querySelectorAll('.curso .btn-agregar')
 const ventanaCarrito = document.querySelector('#ventana-carrito')
 const tablaCursos = document.querySelector('#body-tabla-cursos')
-const menuResponsive = document.querySelector('.icon-menu')
+const menuResponsive = document.querySelector('.fa-bars')
 const enlacesMenu = document.querySelector('#enlaces-menu')
 const header = document.querySelector('#header')
 const botonesVerMas = document.querySelectorAll('.btn-ver-mas')
