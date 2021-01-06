@@ -7,6 +7,7 @@
     <title>/beProgrammer.</title>
     <script src="https://kit.fontawesome.com/59e2cd1765.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" type="image/png" href="./img/favicon.ico"/>
+    <link rel="stylesheet" href="./css/generales.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/responsive.css">
     <link rel="stylesheet" href="./fonts/style.css">
@@ -23,9 +24,7 @@
                 <a href="#">Contacto</a>
                 <a href="#">Categorías</a>
             </div>
-            <div id="carrito">
-                <i class="fas fa-shopping-cart"></i>
-            </div>
+            <a href="./carrito.html" id="carrito"><i class="fas fa-shopping-cart"></i></a>
             <div id="ventana-carrito">
                 <h3>Carrito de compras</h3>
                 <hr>
@@ -52,6 +51,7 @@
             <a href="#">Nosotros</a>
             <a href="#">Contacto</a>
             <a href="#">Categorías</a>
+            <a href="carrito.html" id="carritoMobil">Carrito <i class="fas fa-shopping-cart"></i></a>
         </div>
     </header>
     <section id="portada">
@@ -63,9 +63,7 @@
         </div>
     </section>
     <main id="contenido-principal">
-        <div id="modal">
-            
-        </div>
+        <div id="modal" class="esconder"></div>
         <section id="cursos">
             <article class="curso">
                 <img src="./img/javascript.png" alt="javascript" class="img">
@@ -150,7 +148,7 @@
             <a href="#">Categorías</a>
         </div>
     </footer>
-    <script src="./js/app.js"></script>
+    <script src="./js/index.js" type="module"></script>
 </body>
 
 </html>

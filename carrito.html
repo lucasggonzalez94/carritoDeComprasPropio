@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>/beProgrammer | Carrito</title>
+    <script src="https://kit.fontawesome.com/59e2cd1765.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/png" href="./img/favicon.ico"/>
+    <link rel="stylesheet" href="./css/generales.css">
+    <link rel="stylesheet" href="./css/carrito.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <a href="./index.html" class="logo">/beProgrammer.</a>
+        <nav class="navegacion">
+            <div class="enlaces">
+                <a href="./index.html">Inicio</a>
+                <a href="#">Nosotros</a>
+                <a href="#">Contacto</a>
+                <a href="#">Categorías</a>
+            </div>
+        </nav>
+        <div id="menu-responsive">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div id="enlaces-menu" class="esconder">
+            <a href="./index.html">Inicio</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Contacto</a>
+            <a href="#">Categorías</a>
+        </div>
+    </header>
+    <main id="container">
+        <h3>Carrito de compras</h3>
+        <div id="container-tabla">
+            <table id="tabla-cursos">
+                <thead>
+                    <tr>
+                        <td class="imagen">Imágen</td>
+                        <td class="titulo-curso">Título</td>
+                        <td class="precio-curso">Precio</td>
+                        <td class="cantidad-curso">Cantidad</td>
+                        <td class="acciones"></td>
+                    </tr>
+                </thead>
+                <tbody id="body-tabla-cursos"></tbody>
+            </table>
+        </div>
+        <a href="#" class="btn btn-vaciar">VACIAR CARRITO</a>
+    </main>
+    <script src="./js/carrito.js" type="module"></script>
+</body>
+
+</html>
