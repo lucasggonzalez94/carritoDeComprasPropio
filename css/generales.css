@@ -255,6 +255,7 @@ header a {
     -moz-transform: translate(100%);
     -ms-transform: translate(100%);
     -o-transform: translate(100%);
+    box-shadow: 0px 0 10px black;
 }
 
 #enlaces-menu a {
