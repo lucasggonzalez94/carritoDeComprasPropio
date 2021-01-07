@@ -18,7 +18,6 @@ function leerLocalStorage() {
     for(let i = 0; i < localStorage.length; i++){
         let clave = localStorage.key(i)
         let valor = localStorage.getItem(clave)
-        console.log(valor)
         carrito.push(JSON.parse(valor))
     }
 }
@@ -70,7 +69,6 @@ function vaciarCarrito() {
 
 // Ejecuta las acciones de eliminar cursos o vaciar el carrito
 export function accionesCarrito(e) {
-    console.log(e.target)
     e.preventDefault()
 
     if (e.target.classList.contains('btn-eliminar')) {
@@ -104,7 +102,7 @@ export function esconderElementos(e) {
     if (e.target === menuResponsive) {
         toggleMenu()
     } else if (e.target !== enlacesMenu) {
-        enlacesMenu.classList.add('esconder')
+        toggleMenu()
     }
 }
 
@@ -116,3 +114,6 @@ export function navBlack() {
         header.classList.remove("fixed");
     }
 }
+
+// TAREAS PENDIENTES
+// Arreglar problema al cerrar menu responsive

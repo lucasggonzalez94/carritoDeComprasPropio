@@ -227,6 +227,10 @@ header a {
 
 /* Menu hamburguesa */
 
+/* .esconder {
+    display: none;
+} */
+
 #menu-responsive {
     display: none;
     position: absolute;
