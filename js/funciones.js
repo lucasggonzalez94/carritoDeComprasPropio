@@ -102,7 +102,8 @@ export function esconderElementos(e) {
     if (e.target === menuResponsive) {
         toggleMenu()
     } else if (e.target !== enlacesMenu) {
-        toggleMenu()
+        enlacesMenu.classList.add('esconder')
+        gsap.to(enlacesMenu, {duration: .5, x: '100%'})
     }
 }
 
