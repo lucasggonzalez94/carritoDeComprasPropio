@@ -1,21 +1,11 @@
-@font-face {
-    font-family: tommy-bold;
-    src: url("../fonts/MADE\ TOMMY\ Bold.otf") format("opentype");
-}
-
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: white;
-    background-color: #151e21;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
-h3 {
+#container h3 {
     font-family: tommy-bold;
     display: block;
     width: 100%;
@@ -23,7 +13,7 @@ h3 {
     font-size: 50px;
 }
 
-main {
+#container {
     margin-top: 120px;
     display: flex;
     flex-wrap: wrap;
@@ -49,195 +39,17 @@ main {
 }
 
 .btn {
-    display: inline-block;
-    text-align: center;
-    line-height: 40px;
-    height: 40px;
-    border-radius: 100px;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    -ms-border-radius: 100px;
-    -o-border-radius: 100px;
     color: #fff;
     text-decoration: none;
 }
 
 .btn-vaciar {
-    border: 1px solid white;
     width: 20%;
-    font-weight: lighter;
     margin: 20px 0;
 }
-
-.btn-vaciar:hover {
-    color: #3e454e;
-    background-color: white;
-}
-
-/* .btn-eliminar {
-    background-color: #a52a2a;
-    width: 40px;
-    padding: 5px;
-    margin-right: 10px;
-} */
 
 /* HEADER */
 
 header {
-    position: fixed;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 120px;
-    z-index: 10;
-    box-sizing: border-box;
     background-color: black;
-}
-
-.fixed {
-    background-color: black;
-}
-
-header a {
-    text-decoration: none;
-    color: white;
-}
-
-.logo {
-    position: absolute;
-    display: inline-block;
-    color: white;
-    font-family: tommy-bold, Arial, Helvetica, sans-serif;
-    font-size: 30px;
-    padding: 30px;
-    width: 300px;
-    height: auto;
-    left: 20px;
-    box-sizing: border-box;
-}
-
-.navegacion {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.enlaces {
-    width: 70%;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    position: absolute;
-}
-
-.enlaces a {
-    display: inline-block;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-weight: bold;
-    background-image: linear-gradient(currentColor, currentColor);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 2px;
-    transition: background-size .3s;
-}
-
-.enlaces a:hover, a:focus {
-    background-size: 100% 2px;
-}
-
-#carrito {
-    margin: 0;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    padding: 10px;
-    line-height: 50px;
-    font-size: 30px;
-    border-radius: 100px;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    -ms-border-radius: 100px;
-    -o-border-radius: 100px;
-    cursor: pointer;
-    z-index: 10;
-    right: 20px;
-}
-
-.navegacion a {
-    color: inherit;
-    text-decoration: none;
-    margin-right: 60px;
-}
-
-.navegacion a:last-child {
-    margin-right: 0;
-}
-
-#carrito:hover {
-    background-color: white;
-    color: black;
-}
-
-/* Menu hamburguesa */
-
-#menu-responsive {
-    display: none;
-    position: absolute;
-    right: 40px;
-    font-size: 30px;
-    cursor: pointer;
-    z-index: 9;
-}
-
-#enlaces-menu {
-    height: 100vh;
-    width: 20%;
-    padding-top: 90px;
-    background-color: #3e454e;
-    position: fixed;
-    right: 0%;
-    top: 0px;
-    transform: translate(100%);
-    transition: all .5s;
-    -webkit-transition: all .5s;
-    -moz-transition: all .5s;
-    -ms-transition: all .5s;
-    -o-transition: all .5s;
-    z-index: 0;
-    -webkit-transform: translate(100%);
-    -moz-transform: translate(100%);
-    -ms-transform: translate(100%);
-    -o-transform: translate(100%);
-}
-
-#enlaces-menu a {
-    display: block;
-    text-align: center;
-    font-weight: bold;
-    margin: 0 auto;
-    margin-bottom: 50px;
-}
-
-#enlaces-menu a:first-child {
-    margin-top: 30px;
-}
-
-#carritoMobil {
-    display: inline-block;
-    color: black;
-    height: 30px;
-    width: 60%;
-    background-color: #fff;
-    border-radius: 50px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    -ms-border-radius: 50px;
-    -o-border-radius: 50px;
-    line-height: 30px;
-    text-align: center;
 }

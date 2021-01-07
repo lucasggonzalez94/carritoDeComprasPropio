@@ -156,7 +156,7 @@
     }
 }
 
-@media (max-width: 480px) and (max-height: 500px) {
+@media (max-width: 480px) and (max-height: 600px) {
     #portada .leyenda {
         font-size: 30px;
     }

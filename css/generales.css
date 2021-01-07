@@ -1,5 +1,3 @@
-/* GENERALES */
-
 @font-face {
     font-family: tommy-bold;
     src: url("../fonts/MADE\ TOMMY\ Bold.otf") format("opentype");
@@ -30,6 +28,7 @@ body {
 /* NAVEGACION */
 
 header {
+    top: 0;
     position: fixed;
     display: flex;
     align-items: center;
