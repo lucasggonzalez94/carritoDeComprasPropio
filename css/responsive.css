@@ -182,3 +182,31 @@
         display: none;
     }
 }
+
+@media (max-height: 570px) {
+    #portada .leyenda {
+        font-size: 40px;
+    }
+}
+
+@media (max-height: 480px) {
+    #enlaces-menu {
+        font-size: 15px;
+    }
+
+    #enlaces-menu a {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-height: 400px) {
+    #portada .leyenda {
+        font-size: 30px;
+    }
+}
+
+@media (max-height: 365px) {
+    #enlaces-menu {
+        padding-top: 60px;
+    }
+}
