@@ -1,5 +1,5 @@
 export const bodyTablaCursos = document.querySelector('#body-tabla-cursos')
-const menuResponsive = document.querySelector('.fa-bars')
+const menuResponsive = document.querySelector('#menu-responsive')
 const enlacesMenu = document.querySelector('#enlaces-menu')
 const header = document.querySelector('#header')
 
@@ -87,23 +87,26 @@ export function accionesCarrito(e) {
 // Esconde o muestra el menu responsive
 function toggleMenu() {
     const existeClaseEsconder = enlacesMenu.classList.contains('esconder')
-
+    
     if (existeClaseEsconder) {
         gsap.to(enlacesMenu, {duration: .5, x: '0%'})
         enlacesMenu.classList.remove('esconder')
+        menuResponsive.innerHTML = '<i class="fas fa-times"></i>'
     } else {
         gsap.to(enlacesMenu, {duration: .5, x: '100%'})
         enlacesMenu.classList.add('esconder')
+        menuResponsive.innerHTML = '<i class="fas fa-bars"></i>'
     }
 }
 
 // Al hacer click fuera del menu se esconde
 export function esconderElementos(e) {
-    if (e.target === menuResponsive) {
+    if (e.target.parentElement === menuResponsive) {
         toggleMenu()
     } else if (e.target !== enlacesMenu) {
         enlacesMenu.classList.add('esconder')
         gsap.to(enlacesMenu, {duration: .5, x: '100%'})
+        menuResponsive.innerHTML = '<i class="fas fa-bars"></i>'
     }
 }
 
@@ -115,6 +118,3 @@ export function navBlack() {
         header.classList.remove("fixed");
     }
 }
-
-// TAREAS PENDIENTES
-// Arreglar problema al cerrar menu responsive
