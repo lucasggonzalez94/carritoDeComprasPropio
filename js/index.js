@@ -36,7 +36,7 @@ function cargarEventListeners() {
 function leerCurso(e) {
     e.preventDefault()
 
-    const curso = e.target.parentElement.parentElement.parentElement
+    const curso = e.target.parentElement.parentElement
 
     const cursoObj = {
         id: e.target.dataset.id,
@@ -79,14 +79,14 @@ function mostrarModal(e) {
         gsap.set(modal, {display: 'flex'})
         gsap.to(modal, .5, {opacity: 1})
 
-        const curso = e.target.parentElement.parentElement.parentElement
+        const curso = e.target.parentElement.parentElement
 
         const cursoObj = {
             id: e.target.dataset.id,
             titulo: curso.querySelector('h3').textContent,
             precio: curso.querySelector('.precio').textContent,
             imagen: curso.querySelector('.img').src,
-            descripcion: curso.querySelector('#descripcion').textContent
+            descripcion: curso.querySelector('.descripcion').textContent
         }
 
         const infoModal = document.createElement('div')

@@ -65,12 +65,14 @@
 }
 
 .curso {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     padding: 0;
-    position: relative;
     background-color: #243338;
     max-width: 300px;
-    min-height: 450px;
-    max-height: 450px;
+    height: 500px;
     border-radius: 5px;
     overflow: hidden;
     -webkit-border-radius: 5px;
@@ -84,63 +86,42 @@
     width: 100%;
 }
 
-.curso > div {
-    padding: 10px;
+.curso .contenido-curso {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-.curso > div #descripcion {
-    height: 50px;
-    padding: 10px;
+.curso .contenido-curso .descripcion {
+    width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding-bottom: 175px;
-}
-
-.curso > div h3 {
     margin-top: 0;
 }
 
-.curso > div a {
-    display: inline-block;
-    text-decoration: none;
-    color: black;
-}
-
-.acciones {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-#botones {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: absolute;
-    width: 100%;
-    left: 50%;
-    margin-left: -50%;
-    bottom: 0;
+.curso h3 {
+    margin-left: 15px;
 }
 
 .btn-curso {
+    display: block;
+    text-decoration: none;
+    color: black;
     width: 90%;
     background-color: #368c97;
-    margin-bottom: 20px;
+    margin: 10px;
 }
 
-.curso > div .btn:hover {
+.curso .contenido-curso .btn:hover {
     box-shadow: 0px 0px 10px black;
 }
 
 .precio {
-    position: absolute;
-    bottom: 125px;
-    width: 100%;
-    left: 50%;
-    margin-left: -50%;
     font-weight: bold;
     text-align: center;
 }
@@ -206,6 +187,13 @@
     display: block;
     width: 100%;
     text-align: center;
+}
+
+.acciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 #precioModal p {
